@@ -64,10 +64,9 @@
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-                    </script>
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                     <script>
-                    document.write(new Date().getFullYear());
+                        document.write(new Date().getFullYear());
                     </script> All rights reserved | This template is made with <i class="icon-heart"
                         aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
                         class="text-primary">Colorlib</a>
@@ -80,15 +79,19 @@
 </footer>
 </div>
 
-<script src="{{URL::asset('layout/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{URL::asset('layout/js/jquery-ui.js')}}"></script>
-<script src="{{URL::asset('layout/js/popper.min.js')}}"></script>
-<script src="{{URL::asset('layout/js/bootstrap.min.js')}}"></script>
-<script src="{{URL::asset('layout/js/owl.carousel.min.js')}}"></script>
-<script src="{{URL::asset('layout/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{URL::asset('layout/js/aos.js')}}"></script>
+<script src="{{ URL::asset('layout/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ URL::asset('layout/js/jquery-ui.js') }}"></script>
+<script src="{{ URL::asset('layout/js/popper.min.js') }}"></script>
+<script src="{{ URL::asset('layout/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('layout/js/owl.carousel.min.js') }}"></script>
+<script src="{{ URL::asset('layout/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ URL::asset('layout/js/aos.js') }}"></script>
 
-<script src="{{URL::asset('layout/js/main.js')}}"></script>
+<script src="{{ URL::asset('layout/js/main.js') }}"></script>
+<script src="{{ URL::asset('vendor/animsition/animsition.min.js') }}"></script>
+<!-- Main JS-->
+<script src="{{ URL::asset('js/main.js') }}"></script>
+
 
 </body>
 

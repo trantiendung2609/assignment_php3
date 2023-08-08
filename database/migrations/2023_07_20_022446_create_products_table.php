@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('brand_id');
+            $table->unsignedInteger('size_id');
             $table->timestamps();
         });
     }

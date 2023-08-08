@@ -16,6 +16,9 @@ class Product extends Model
         'description',
         'category_id',
         'brand_id',
+        'size_id',
+        'created_at',
+        'updated_at',
     ];
 
     public function brand()
@@ -26,6 +29,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(category::class);
+    }
+    public function size()
+    {
+        return $this->belongsTo(size::class);
     }
 
     public function scopeByGender($query, $gender)

@@ -9,26 +9,27 @@
     <!-- Title Page-->
     <title>Dashboard</title>
     <!-- Fontfaces CSS-->
-    <link href="{{URL::asset('resources/css/font-face.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('resources/css/font-face.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/font-awesome-5/css/fontawesome-all.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet"
+        media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="{{URL::asset('vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="{{URL::asset('vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet"
+    <link href="{{ URL::asset('vendor/animsition/animsition.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet"
         media="all">
-    <link href="{{URL::asset('vendor/wow/animate.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/slick/slick.cs')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{URL::asset('vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/wow/animate.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/slick/slick.cs') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="{{URL::asset('css/theme.css')}}" rel="stylesheet" media="all">
+    <link href="{{ URL::asset('css/theme.css') }}" rel="stylesheet" media="all">
 
 
 
@@ -42,9 +43,12 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
+
+                        <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+                            <div class="site-logo">
+                                <a href="/admin/home_admin" class="js-logo-clone">Shoppers</a>
+                            </div>
+                        </div>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -56,23 +60,36 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="/admin/home_admin">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <a class="js-arrow" href="">
+                                <i class="fas fa-tachometer-alt"></i>Bảng dữ liệu</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="/admin/product">Bảng sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/brand">Bảng thương hiệu</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/category">Bảng loại</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/size">Bảng Size</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/user">Bảng User</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/manage-order">Bảng quản lí đơn hàng</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/list-coupon">Bảng quản lí giảm giá</a>
+                                </li>
+                            </ul>
+                        </li>
 
-                        <li>
-                            <a href="/product">
-                                <i class="fas fa-table"></i>Bảng sản phẩm</a>
-                        </li>
-                        <li>
-                            <a href="/brand">
-                                <i class="fas fa-table"></i>Bảng thương hiệu</a>
-                        </li>
-                        <li>
-                            <a href="/category">
-                                <i class="fas fa-table"></i>Bảng loại</a>
-                        </li>
-                        <li>
-                            <a href="/size">
-                                <i class="fas fa-table"></i>Bảng Size</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -81,28 +98,56 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
-                </a>
+                <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+                    <div class="site-logo">
+                        <a href="/admin/home-admin" class="js-logo-clone"
+                            style="
+                        text-transform: uppercase;
+                        color: #25262a;
+                        letter-spacing: .2em;
+                        font-size: 20px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border: 2px solid #25262a;
+                    ">Shoppers</a>
+                    </div>
+                </div>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Bảng dữ liệu</a>
+                            <a class="js-arrow" href="/admin/home_admin">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+
+                            <div class="js-arrow">
+                                <i class="fas fa-table"></i><span
+                                    style="
+                                margin-left: 21px;
+                            ">Bảng
+                                    dữ liệu</span>
+                            </div>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="/product">Bảng sản phẩm</a>
+                                    <a href="/admin/product">Bảng sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="/brand">Bảng thương hiệu</a>
+                                    <a href="/admin/brand">Bảng thương hiệu</a>
                                 </li>
                                 <li>
-                                    <a href="/category">Bảng loại</a>
+                                    <a href="/admin/category">Bảng loại</a>
                                 </li>
                                 <li>
-                                    <a href="/size">Bảng Size</a>
+                                    <a href="/admin/size">Bảng Size</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/user">Bảng User</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/manage-order">Bảng quản lí đơn hàng</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/list-coupon">Bảng quản lí giảm giá</a>
                                 </li>
                             </ul>
                         </li>
@@ -238,14 +283,14 @@
                             </div>
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
-                                    <div class="image">
+                                    {{-- <div class="image">
                                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                    </div>
+                                    </div> --}}
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">john doe</a>
+                                        <a class="js-acc-btn" href="#">{{ Auth::user()->name }}</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
-                                        <div class="info clearfix">
+                                        {{-- <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
                                                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
@@ -257,7 +302,7 @@
                                                 </h5>
                                                 <span class="email">johndoe@example.com</span>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="account-dropdown__body">
                                             <div class="account-dropdown__item">
                                                 <a href="#">
@@ -267,14 +312,23 @@
                                                 <a href="#">
                                                     <i class="zmdi zmdi-settings"></i>Setting</a>
                                             </div>
-                                            <div class="account-dropdown__item">
+                                            {{-- <div class="account-dropdown__item">
                                                 <a href="#">
                                                     <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                            </div>
+                                            </div> --}}
                                         </div>
-                                        <div class="account-dropdown__footer">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        <div class="account-dropdown__footer"
+                                            style="text-align: left; display: flex;align-items: center;">
+                                            <i class="zmdi zmdi-power" style="margin-left: 26px"></i>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-dropdown-link :href="route('logout')"
+                                                    onclick="event.preventDefault();
+                                                                                this.closest('form').submit();">
+                                                    {{ __('Log Out') }}
+                                                </x-dropdown-link>
+                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
