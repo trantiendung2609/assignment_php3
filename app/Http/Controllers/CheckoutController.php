@@ -203,7 +203,6 @@ class CheckoutController extends Controller
                 'vnp_TxnRef' => $_GET['vnp_TxnRef'],
                 'vnp_SecureHash' => $_GET['vnp_SecureHash'],
             ];
-            $result = $this->Vnpay->insert_vnpay($data_vnpay);
         }
     }
 }

@@ -57,8 +57,8 @@
                                                         <a class="item"
                                                             href="{{ URL::to('/admin/view-order/' . $order->id) }}">
                                                             <i class="zmdi zmdi-edit"></i></a>
-                                                        <a onclick="return confirm('Are you sure')" class="item"
-                                                            href="{{ URL::to('/admin/delete-order/' . ['id' => $order->id]) }}">
+                                                        {{-- <a onclick="return confirm('Are you sure')" class="item"
+                                                            href="{{ URL::to('/admin/delete-order/' . ['id' => $order->id]) }}"> --}}
                                                     </div>
                                                 </td>
                                             </tr>

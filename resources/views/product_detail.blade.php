@@ -22,7 +22,7 @@
                     <p>Giới tính: {{ $products->gender }}</p>
 
                     <p class="mb-4">Mô tả: {{ $products->description }}</p>
-                    <p><strong class="text-primary h4">Giá: {{ $products->price }}</strong></p>
+                    <p><strong class="text-primary h4">Giá: {{ number_format($products->price) . '' . 'VNĐ' }}</strong></p>
                     <div class="mb-1">
                         <strong>Chọn size</strong>
                         <select class="form-control" name="size_id" id="">

@@ -72,7 +72,7 @@
 
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item" style="text-align: left;">
-                                                    <a href="#">
+                                                    <a href="{{ route('profile.edit') }}">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
                                                 <div class="account-dropdown__item" style="text-align: left;">
