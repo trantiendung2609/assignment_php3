@@ -22,6 +22,7 @@ class AdminController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.home_admin');
         } else {
+            dd();
             return redirect()->route('login');
         }
     }
